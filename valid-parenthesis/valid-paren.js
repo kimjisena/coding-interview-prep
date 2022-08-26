@@ -1,5 +1,5 @@
 /**
- * @param str A string of parenthesis e.g: `'()[]'`
+ * @param {string} str A string of parenthesis e.g: `'()[]'`
  * @returns `true` if `str` is valid, `false` otherwise
  */
 function isValid(str) {

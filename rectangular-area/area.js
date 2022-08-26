@@ -1,7 +1,7 @@
 /**
- * @param len Length in feet or meters
- * @param wid Width in feet or meters
- * @param system Measurement system `'imperial'` or `'metric'`
+ * @param {number} len Length in feet or meters
+ * @param {number} wid Width in feet or meters
+ * @param {string} system Measurement system `'imperial'` or `'metric'`
  * @returns area in square feet and square meters
  */
 

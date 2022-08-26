@@ -1,3 +1,7 @@
+/**
+ * @param str A string of parenthesis e.g: `'()[]'`
+ * @returns `true` if `str` is valid, `false` otherwise
+ */
 function isValid(str) {
   let stack = [];
   let valid = true;

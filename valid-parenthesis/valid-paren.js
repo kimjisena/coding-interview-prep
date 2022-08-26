@@ -2,16 +2,14 @@ function isValid(str) {
   let stack = [];
   let valid = true;
 
-  function hasMatchingOpeningParen (closing) {
+  function hasMatch (closing) {
     let opening = stack.pop();
 
-    if ((opening === '(' && closing === ')') || 
-        (opening === '[' && closing === ']') || 
-        (opening === '{' && closing === '}')) {
-      return true;
-    } else {
-      return false;
-    }
+    return (
+      (opening === '(' && closing === ')') || 
+      (opening === '[' && closing === ']') || 
+      (opening === '{' && closing === '}') || false
+      );
   }
 
   for (let paren of str) {
@@ -20,8 +18,8 @@ function isValid(str) {
         stack.push(paren);
         break;
       case ')': case ']': case '}':
-        // compare if has matching opening parenthesis
-        valid = valid && hasMatchingOpeningParen(paren);
+        // compare if closing paren has matching opening paren
+        valid = valid && hasMatch(paren);
         break;
     }
   }

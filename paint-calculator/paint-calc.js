@@ -6,7 +6,7 @@
 function getGallons (len, wid) {
   let gallons = null;
 
-  let factor = 350;
+  const factor = 350;
   let area = len * wid;
   gallons = Math.ceil(area / factor);
   

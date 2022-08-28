@@ -19,9 +19,3 @@ function pairwise(arr, arg) {
 
   return sumPairs;
 }
-
-pairwise([1,4,2,3,0,5], 7); // => 11
-
-pairwise([1, 1, 1], 2); // => 1
-
-pairwise([0, 0, 0, 0, 1, 1], 1); // => 10

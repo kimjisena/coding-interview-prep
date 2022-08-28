@@ -1,8 +1,8 @@
 function bubbleSort(array) {
   // Only change code below this line
-  let temp;
-  for(let i = 0; i < array.length; i++) {
-    for (let j = i + 1; j < array.length; j++) {
+  pickingLoop: for(let i = 0; i < array.length; i++) {
+    bubblingLoop: for (let j = i + 1; j < array.length; j++) {
+      let temp;
       if (array[i] > array[j]) {
         temp = array[i];
         array[i] = array[j];

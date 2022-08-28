@@ -4,7 +4,7 @@ function quickSort(array) {
     return array;
   }
 
-  let pivotIdx = 0;
+  let pivotIdx = Math.floor(Math.random() * array.length);
   let left = [], right = [];
   for (let i = 0; i < array.length; i++) {
     if (i === pivotIdx) continue;

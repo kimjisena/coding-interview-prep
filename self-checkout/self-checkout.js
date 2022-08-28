@@ -9,7 +9,7 @@
 function selfCheckOut(arr) {
   const RATE = 5.5 / 100;
   let subtotal, tax, total;
-  subtotal = arr.map(e => e.price * e.qty).reduce((acc, e) => acc + e, 0) * 100;
+  subtotal = arr.map(item => item.price * item.qty).reduce((acc, price) => acc + price, 0) * 100;
   tax = subtotal * RATE;
   total = subtotal + tax;
 

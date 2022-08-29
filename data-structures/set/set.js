@@ -21,22 +21,32 @@ class Set {
       this.dictionary[element] = element;
       this.length++;
       return true;
-    } else {
-      return false;
     }
+    return false;
   }
 
   remove (element) {
     if (this.has(element)) {
       this.length--;
       return delete this.dictionary[element];
-    } else {
-      return false;
     }
+    return false;
   }
 
   size () {
     return this.length;
+  }
+
+  union (set) {
+    let unionSet = new Set();
+    for (let value of this.values()) {
+      unionSet.add(value);
+    }
+
+    for(let value of set.values()) {
+      unionSet.add(value);
+    }
+    return unionSet;
   }
   // Only change code above this line
 }

@@ -52,11 +52,21 @@ class Set {
   intersection (set) {
     let interSet = new Set();
     this.values().forEach(value => {
-      if(set.has(value)) {
+      if (set.has(value)) {
         interSet.add(value);
       }
     });
     return interSet;
+  }
+
+  difference (set) {
+    let diffSet = new Set();
+    this.values().forEach(value => {
+      if (!set.has(value)) {
+        diffSet.add(value);
+      }
+    });
+    return diffSet;
   }
   // Only change code above this line
 }

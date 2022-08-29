@@ -16,7 +16,6 @@ function LinkedList() {
   };
 
   this.__proto__.add = function(element){
-    // Only change code below this line
     const newNode = new Node(element);
     if (!head) {
       head = newNode;
@@ -28,7 +27,6 @@ function LinkedList() {
       nextNode.next = newNode;
     }
     length++;
-    // Only change code above this line
   };
 
   this.__proto__.remove = function (element) {
@@ -52,5 +50,46 @@ function LinkedList() {
       }
       length--;
     }
+  }
+
+  this.__proto__.isEmpty = function () {
+    return length === 0;
+  }
+
+  this.__proto__.indexOf = function (element) {
+    let idx = 0;
+    let nextNode = head;
+
+    if (!nextNode) {
+      return -1;
+    }
+
+    while(nextNode.element !== element) {
+      idx++;
+      nextNode = nextNode.next;
+
+      if (!nextNode) {
+        idx = -1;
+        break;
+      }
+    }
+
+    return idx;
+  }
+
+  this.__proto__.elementAt = function (index) {
+    let idx = 0;
+    let nextNode = head;
+
+    if (!nextNode || index >= length) {
+      return;
+    }
+
+    while(idx < index) {
+      nextNode = nextNode.next;
+      idx++;
+    }
+
+    return nextNode.element;
   }
 }

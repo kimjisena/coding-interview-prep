@@ -68,5 +68,9 @@ class Set {
     });
     return diffSet;
   }
+
+  isSubsetOf (set) {
+    return this.values().every(value => set.has(value));
+  }
   // Only change code above this line
 }

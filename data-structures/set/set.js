@@ -48,5 +48,15 @@ class Set {
     }
     return unionSet;
   }
+
+  intersection (set) {
+    let interSet = new Set();
+    this.values().forEach(value => {
+      if(set.has(value)) {
+        interSet.add(value);
+      }
+    });
+    return interSet;
+  }
   // Only change code above this line
 }
